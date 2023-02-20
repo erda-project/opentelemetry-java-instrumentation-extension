@@ -7,7 +7,7 @@ build java-agent
 ```
 ./gradlew build
 ```
-build imava
+build image
 ```
 docker build .
 ```
