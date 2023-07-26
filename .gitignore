@@ -31,9 +31,8 @@
 
 # Local History dir
 .history/
-.gradle/
+.gradle/*
 .gradle
-
 # Dependency directories (remove the comment below to include it)
 /build/
 
