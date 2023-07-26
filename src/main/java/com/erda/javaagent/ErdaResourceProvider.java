@@ -15,7 +15,11 @@ import io.opentelemetry.sdk.resources.Resource;
 public class ErdaResourceProvider implements ResourceProvider {
   @Override
   public Resource createResource(ConfigProperties config) {
-    Attributes attributes = Attributes.builder().put("custom.resource", "erda").build();
+    Attributes attributes =
+        Attributes.builder()
+            .put("custom.resource", "erda")
+            .put("service_instance_id", System.getenv("POD_UUID"))
+            .build();
     return Resource.create(attributes);
   }
 }
